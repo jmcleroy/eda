@@ -1,7 +1,6 @@
 ---
 
 - name: Port State Event from Arista
-
   hosts: all
 
   sources:
