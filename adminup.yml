@@ -11,3 +11,4 @@
         - name: "{{ affected_interface }}"
           enabled: true
         state: replaced
+      when: ansible_network_os == eos
