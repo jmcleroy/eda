@@ -11,7 +11,7 @@
         - name: "{{ affected_interface }}"
           enabled: true
         state: replaced
-      when: "ansible_network_os==eos"
+      when: "device_os == 'eos'"
 
     - name: Merge provided configuration with device configuration
       cisco.nxos.nxos_interfaces:
@@ -19,4 +19,4 @@
         - name: Ethernet1/1
           enabled: true
         state: replaced
-      when: ansible_network_os == nxos
+      when: "device_os == 'nxos'"
