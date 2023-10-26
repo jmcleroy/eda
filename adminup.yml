@@ -1,6 +1,6 @@
 ---
 - name: Set Admin State to Up
-  hosts: all
+  hosts: {{ ansible_eda.event.body.tags.source }}
   gather_facts: false
   connection: network_cli
   tasks:
