@@ -13,10 +13,10 @@
         state: replaced
       when: "device_os == 'eos'"
 
-    - name: Merge provided configuration with device configuration
+    - name: Admins up Cisco interface
       cisco.nxos.nxos_interfaces:
         config:
-        - name: Ethernet1/1
+        - name: "{{ affected_interface }}"
           enabled: true
         state: replaced
       when: "device_os == 'nxos'"
