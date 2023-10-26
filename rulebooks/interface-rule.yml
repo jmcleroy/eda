@@ -1,5 +1,4 @@
 ---
-
 - name: Port State Event from network
   hosts: all
   sources:
