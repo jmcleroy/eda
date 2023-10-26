@@ -1,12 +1,12 @@
 ---
 
-- name: Port State Event from Arista
+- name: Port State Event from network
   hosts: all
   sources:
    - ansible.eda.kafka:
        host: 172.16.1.135
        port: 9092
-       topic: telegraf2
+       topic: telegraf
   rules:
    - name: Test
      condition: event.fields.admin_status == "DOWN"
