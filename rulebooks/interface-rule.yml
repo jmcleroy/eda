@@ -4,7 +4,7 @@
   hosts: all
   sources:
    - ansible.eda.kafka:
-       host: 172.16.1.135
+       host: streaming.ericlab.local
        port: 9092
        topic: telegraf
   rules:
