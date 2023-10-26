@@ -13,3 +13,4 @@
        run_job_template:
          organization: "Default"
          name: "EDA_Admin"
+         post_events: true
