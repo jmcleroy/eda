@@ -10,7 +10,6 @@
         config:
         - name: "{{ affected_interface }}"
           enabled: true
-        state: replaced
       when: "device_os == 'eos'"
 
     - name: Admins up Cisco interface
@@ -18,5 +17,4 @@
         config:
         - name: "{{ affected_interface }}"
           enabled: true
-        state: replaced
       when: "device_os == 'nxos'"
