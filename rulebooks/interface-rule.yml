@@ -16,4 +16,4 @@
          post_events: true
          job_args:
            extra_vars:
-             limit: "{{ ansible_eda.event.body.tags.source }}"
+             limit: ansible_eda.event.body.tags.source
