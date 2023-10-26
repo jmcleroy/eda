@@ -14,3 +14,6 @@
          organization: "Default"
          name: "EDA_Admin"
          post_events: true
+         job_args:
+           extra_vars:
+             limit: ansible_eda.event.body.tags.source
