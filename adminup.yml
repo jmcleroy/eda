@@ -10,4 +10,4 @@
         config:
         - name: "{{ affected_interface }}"
           enabled: true
-        state: merged
+        state: replaced
