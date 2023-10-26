@@ -15,4 +15,4 @@
      condition: event.fields.admin_status == "DOWN"
      action:
        run_job_template:
-         name: adminup.yml
+         name: EDA_Admin
