@@ -2,7 +2,7 @@
 - name: Set Admin State to Up
   hosts: all
   gather_facts: false
-  connection: local
+  connection: netconf
   tasks:
   
     - name: Admins up Arista interface
