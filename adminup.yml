@@ -1,6 +1,6 @@
 ---
 - name: Set Admin State to Up
-  hosts: all
+  hosts: "{{ ansible_eda.event.body.tags.source }}"
   gather_facts: false
   connection: network_cli
   tasks:
@@ -8,13 +8,13 @@
     - name: Admins up Arista interface
       arista.eos.eos_interfaces:
         config:
-        - name: "{{ event.body.fields.admin_status == DOWN }}"
+        - name: "{{ ansible_eda.event.body.fields.admin_status == DOWN }}"
           enabled: true
       when: "device_os == 'eos'"
 
     - name: Admins up Cisco interface
       cisco.nxos.nxos_interfaces:
         config:
-        - name: "{{ event.body.fields.admin_status == DOWN }}"
+        - name: "{{ ansible_eda.event.body.fields.admin_status == DOWN }}"
           enabled: true
       when: "device_os == 'nxos'"
