@@ -8,13 +8,13 @@
     - name: Admins up Arista interface
       arista.eos.eos_interfaces:
         config:
-        - name: "{{ affected_interfaces }}"
+        - name: "{{ event.body.fields.admin_status == DOWN }}"
           enabled: true
       when: "device_os == 'eos'"
 
     - name: Admins up Cisco interface
       cisco.nxos.nxos_interfaces:
         config:
-        - name: "{{ affected_interfaces }}"
+        - name: "{{ event.body.fields.admin_status == DOWN }}"
           enabled: true
       when: "device_os == 'nxos'"
