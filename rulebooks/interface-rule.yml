@@ -3,8 +3,8 @@
   hosts: all
   sources:
    - ansible.eda.kafka:
-       host: 172.16.1.135
-       port: 9093
+       host: 172.16.1.103
+       port: 9092
        topic: telegraf
   rules:
    - name: Test
