@@ -3,7 +3,7 @@
   hosts: all
   sources:
    - ansible.eda.kafka:
-       host: 172.16.1.103
+       host: localhost
        port: 9092
        topic: telegraf
   rules:
