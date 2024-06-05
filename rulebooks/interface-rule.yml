@@ -4,7 +4,7 @@
   sources:
    - ansible.eda.kafka:
        host: eda.sandbox146.opentlc.com
-       port: 29092
+       port: 29093
        topic: network
   rules:
    - name: Test
