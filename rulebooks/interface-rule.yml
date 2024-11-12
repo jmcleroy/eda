@@ -12,7 +12,7 @@
      action:
        run_job_template:
          organization: "Default"
-         name: "EDA_Test"
+         name: "EDA_Admin"
          post_events: true
          job_args:
            extra_vars:
