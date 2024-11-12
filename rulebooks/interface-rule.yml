@@ -3,9 +3,9 @@
   hosts: all
   sources:
    - ansible.eda.kafka:
-       host: 3.141.230.190
+       host: 172.16.1.103
        port: 9092
-       topic: networks
+       topic: telegraf
   rules:
    - name: Test
      condition: event.body.fields.admin_status == "DOWN"
